@@ -33,7 +33,7 @@ export default function RoastMySol() {
             </p>
           </div>
 
-          <div className="relative w-[80%] flex flex-col gap-7 xl:flex-row">
+          <div className="relative flex flex-col gap-7 xl:flex-row xl:w-[80%]">
             <UserWalletCard />
             <RoastLogs />
           </div>
