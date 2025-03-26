@@ -10,12 +10,10 @@ import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
-import { clusterApiUrl } from "@solana/web3.js";
-
 import "@solana/wallet-adapter-react-ui/styles.css";
 
 const WalletContextProvider: FC<{ children: ReactNode }> = ({ children }) => {
-  const network = clusterApiUrl("mainnet-beta");
+  const network = process.env.NEXT_PUBLIC_ALCHEMY_RPC!;
 
   const wallets = useMemo(
     () => [new PhantomWalletAdapter(), new SolflareWalletAdapter()],
